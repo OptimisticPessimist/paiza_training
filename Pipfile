@@ -8,6 +8,7 @@ pytest = "==5.0.1"
 pylint = "*"
 autopep8 = "*"
 isort = "*"
+teaching-assistant = {path = "."}
 
 [packages]
 teaching-assistant = {editable = true,path = "."}
