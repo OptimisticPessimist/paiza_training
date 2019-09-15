@@ -24,9 +24,9 @@
     1. GitHubのリポジトリから自分のPCにクローンする
         - フォルダ/ディレクトリを作りたい場所へ移動してから下記をコピペ
             ```
-            git clone https://github.com/GuitarBuilderClass/Teaching-Assistant.git
+            git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
             ```
-        Gitがややこしくて使うのが鬱陶しかったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant/archive/master.zip)して解凍してもいいよ
+        Gitがややこしくて使うのが鬱陶しかったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
         - Gitを使わないなら以降のGit関連の話すべて無視してね
         - でも仕事ではGitとかSVNとかで管理するのが普通だから覚えると便利
             - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`とかにならないようにしよう
