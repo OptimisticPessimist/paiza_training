@@ -21,15 +21,17 @@
             - 商用する場合はフリーじゃないので注意
 
 1. 環境構築
-    1. GitHubのリポジトリから自分のPCにクローンする
-        - フォルダ/ディレクトリを作りたい場所へ移動してから下記をコピペ
+    1. GitHubのリポジトリから自分のPCに`clone`もしくは`fork`するかzipファイルをダウンロードする
+        - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記をコピペ
             ```
             git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
             ```
-        Gitがややこしくて使うのが鬱陶しかったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
-        - Gitを使わないなら以降のGit関連の話すべて無視してね
-        - でも仕事ではGitとかSVNとかで管理するのが普通だから覚えると便利
-            - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`とかにならないようにしよう
+        - `fork`: [ここ](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python)の緑色のボタン（Read the guide)の右下らへんにボタンあるよ
+        
+        - DL: Gitがややこしくて使うのが鬱陶しかったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
+            - Gitを使わないなら以降のGit関連の話すべて無視してね
+            - でも仕事ではGitとかSVNとかで管理するのが普通だから覚えると便利
+            - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`みたいなの嫌じゃん？
     1. `pipenv` のインストールと有効化
         - クローンしたファイルにはPipfileという必要な設定が詰まったファイルが入っているのでpipenvで使えるようにする
             ```
@@ -69,7 +71,7 @@
             ```
             git checkout -b <あなたの名前>/first-checkout
             ```
-            `<自分の名前>/<任意のリポジトリ名>`は好きに使ってください  
-            他人のリポジトリや`master`には手を出さないように　　
-            それか自分のアカウントにforkしてください
-                - プルリクエストしやすいし
+            - `<自分の名前>/<任意のリポジトリ名>`は好きに使ってください  
+                - 他人のリポジトリや`master`には手を出さないように　　
+            - それか自分のアカウントにforkしてください　　
+                - `clone'
