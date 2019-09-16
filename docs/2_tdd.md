@@ -17,8 +17,71 @@
 
 
 #### 2. pytestの使い方： テストコードを使いまわそう
-`src/solution.py`というコードに対するテストは`tests/solution_test.py`に書きます。
+`src/solution.py`というコードに対するテストは`tests/test_solution.py`に書きます  
+ソースコードは`src/*.py`、テストコードは`tests/test_*.py`という形で作成します  
+また、テストコードの中で実行するテストケースは`def test_*():`という形で定義します
 
+pytestでは同じ関数に対して様々な値を入力してテストが通るか試すparametrizeという機能があります  
+実例を見せましょう
+
+テストケースは`test_solution.py`で記述します
+```python
+import pytest
+from src.solution import *
+
+
+@pytest.mark.parametrize("a, b, expected", [
+        (1, 2, 3),
+])
+def test_add(a, b, expected):
+    actual = add(a, b)
+    assert actual == expected
+```
+
+このテストケースを通過する最短の関数`add(a, b)`は次の形です
+```python
+def add(a, b):
+    return 3
+```
+どんな入力だろうが`3`を返す関数です  
+当然、引数に`a=1, b=2`が入力されようがされまいが`add(a, b)`は`3`を返します  
+`Teaching-Assistant-Python`ディレクトリ上に移動し、ターミナルで`pytest`を実行してください
+テストケースの期待値`expected`は`3`なので、このテストケースは通過します　　
+
+もちろん、他のテストケースでは通用しませんよね  
+テストコードにテストケースを追加します
+```python
+import pytest
+from src.solution import *
+
+
+@pytest.mark.parametrize("a, b, expected", [
+        (1, 2, 3),
+        (2, 3, 5)
+])
+def test_add(a, b, expected):
+    actual = add(a, b)
+    assert actual == expected
+```
+
+新たに追加されたテストケースは2+3=5ですが、`add(a, b)`は3しか返しません  
+コードの修正が必要です！！！
+
+```python
+def add(a, b):
+    return a + b
+```
+単純ですが、これで必ず`add(a, b)`はaとbの和を返すようになりました
+
+
+テスト駆動開発は
+1. テストを失敗させる
+1. 絶対に成功しかない単一パターンを返す関数を作る
+1. 単一パターンしか返せないのでテストケースを増やすと失敗する
+1. テストケースを通過するコードを書く
+
+この繰り返しでどんなテストケースでも期待通りの値を返すように直していきます  
+込み入った処理がある場合は関数を分割しても構いません  
 
 
 #### 3. テストケースの作り方: 境界値や大きすぎるデータへの対応
