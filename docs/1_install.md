@@ -88,7 +88,6 @@
     - クローンしたファイルにはPipfileという必要な設定が詰まったファイルが入っているのでpipenvで使えるようにする
         ```
         pip install pipenv
-        pipenv --python 3.4.3
         pipenv install -e .
         pipenv shell
         pipenv install --dev .
