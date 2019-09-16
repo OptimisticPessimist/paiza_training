@@ -6,9 +6,14 @@
         - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
         - Linux: 個別対応します
 
+
 1. GitとGitHubアカウントの作成
     1. Gitとは
         - バージョン管理（現在と過去のファイル変更履歴を比較したり）
+    1．　GitHubとは
+        - [GitHub](https://github.com)はGitを利用してコード共有や保管ができるサイト
+        - アカウントを作成する
+            - プログラマが利用するサービスの認証に使えることがあるアカウントのひとつ
     1. ツールのダウンロード
         - [ここから](https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
     1. (時間があるときに) Gitの使い方
@@ -17,21 +22,34 @@
         - [SourceTree](https://prog-8.com/blogs/how_to_use_sourcetree)というソフトを使うとGitのコマンドを自分で打たなくていい
             - けどコマンドの名前と働きは知っておかないと使えない
             - 最初は`clone`, `pull`, `branch`,  `checkout`, `commit`, `push`が使えたら充分
-        - Linuxには対応していないので[GitKraken](https://www.gitkraken.com/)とかいいんじゃないでしょうか
+        - Linuxには対応していないので似たようなものが欲しいなら[GitKraken](https://www.gitkraken.com/)とかいいんじゃないでしょうか
             - 商用する場合はフリーじゃないので注意
 
+1. Visual Studio Codeのインストールと設定
+    1. インストール
+        - [ここからDL](https://code.visualstudio.com/download)
+    1. 日本語化
+        - [ここ参照](https://qiita.com/HiroCh/items/481adfa969dbe689f566)
+    1. Live Shareの有効化
+        - [上と似た方法で「VSLiveShare」を検索してインストール](https://qiita.com/mh4gf/items/8f072b2faabba90937d3)
+        - ホスト（プログラムを実行するPC）
+        - ゲスト（インターネット越しにプログラミングしたりコード読んだりする人）
+            - 基本的に教える側（私）のPCをホストにするといろんな設定をホストが操作して、面倒なところ以外の本質だけ触れるようにできるはずです
+    1. GitHubのアカウントでログインする
+        - ホストからもらったURLへアクセスするとリモートペアプログラミングが開始できる
+       
 1. 環境構築
-    1. GitHubのリポジトリから自分のPCに`clone`もしくは`fork`するかzipファイルをダウンロードする
+    1. GitHubのリポジトリから自分のPCに`fork`もしくは`clone`するかzipファイルをダウンロードする
+        - `fork`: [ここ](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python)の緑色のボタン（Read the guide)の右下らへんにforkボタンがある
+            - 自分のGitHubアカウントにリポジトリが作成される        
         - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記をコピペ
             ```
             git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
             ```
-        - `fork`: [ここ](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python)の緑色のボタン（Read the guide)の右下らへんにボタンあるよ
-        
-        - DL: Gitがややこしくて使うのが鬱陶しかったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
+        - DL: Gitがややこしくて使うのが難しいと思ったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
             - Gitを使わないなら以降のGit関連の話すべて無視してね
-            - でも仕事ではGitとかSVNとかで管理するのが普通だから覚えると便利
-            - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`みたいなの嫌じゃん？
+            - でも仕事ではGitとかSVNとかのツールで管理するのが普通だから覚えると便利
+                - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`みたいなの嫌じゃん？
     1. `pipenv` のインストールと有効化
         - クローンしたファイルにはPipfileという必要な設定が詰まったファイルが入っているのでpipenvで使えるようにする
             ```
@@ -41,7 +59,7 @@
             pipenv install --dev .
             ```
             `pip`もしくは`pipenv`が正しく動かなかったら連絡ください  
-            - `-e .` はこの後で出てくるpytestの環境を設定するのに必要  
+            - `-e .` はこの後で出てくるpytestの環境を設定している（setup.pyが裏で動いている）  
             - `--dev .` オプションはdevelop(開発用)のパッケージをインストールするのに必要  
             - その他、何か必要なパッケージがあれば `pipenv install <PACAGE_NAME>`でインストール可能  
                 - `pipenv install --dev <PACAGE_NAME>`で開発用環境にだけインストールできる
@@ -71,8 +89,9 @@
             ```
             git checkout -b <あなたの名前>/first-checkout
             ```
-            - `<自分の名前>/<任意のリポジトリ名>`は好きに使ってください  
+            - `clone`した場合は`<自分の名前>/<任意のリポジトリ名>`は好きに使ってください  
                 - 他人のリポジトリや`master`には手を出さないように　　
             - それか自分のアカウントにforkしてください
                 - forkしても何か変更する前には`git checkout -b <ブランチ名>`するとミスったとき戻りやすい(参考[GitHub Flow](https://gist.github.com/Gab-km/3705015))
-                - プルリクエストの依頼先に`GuitarBuilderClass`や教えてくれる人を指定すると依頼された人がチェックしてコメントくれる仕組み
+                - リモートの`master`以外のブランチへ`push`してからGitHub上でプルリクエストの依頼をする
+                    - 依頼先に`GuitarBuilderClass`や教えてくれる人を指定すると、依頼された人がチェックしてコメントくれる仕組み
