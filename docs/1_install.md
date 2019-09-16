@@ -1,6 +1,6 @@
 ## 準備
 
-###　目次
+### 目次
 1. Python本体のインストール
 1. GitとGitHubアカウントの作成
 1. Visual Studio Codeのインストールと設定
