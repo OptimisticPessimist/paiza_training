@@ -8,16 +8,16 @@
 
 ---
 #### 1. Python本体
-- Python 3の最新安定版のバージョンは2019/9/16現在`3.7.4`
-    - [Windows(64bit版)](https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64-webinstall.exe)
-    - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
-    - Linux: [ここ](https://www.python.org/downloads/release/python-374/)見て対応して、分からなければ質問ください
-- ただしPaizaスキルチェックは`3.4.3`を使用している（サポート切れなのでその内バージョンアップされるはず）
+- Paizaスキルチェックは`3.4.3`を使用しているのでこちらをインストールする（サポート切れなのでその内バージョンアップされるはず）
     - [Windows(64bit版)](https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64.msi)
     - [Mac](https://www.python.org/ftp/python/3.4.3/python-3.4.3-macosx10.6.pkg)
     - Linux: [ここ](https://www.python.org/downloads/release/python-343/)見て対応して、分からなければ質問ください
+- ただしPython 3の最新安定版のバージョンは2019/9/16現在`3.7.4`
+    - [Windows(64bit版)](https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64-webinstall.exe)
+    - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
+    - Linux: [ここ](https://www.python.org/downloads/release/python-374/)見て対応して、分からなければ質問ください
     
-- 注意：　Python 3.4では使えない機能の中で競技プログラミングに使いたくなりそうな機能
+- 注意：　Python 3.4では使えない機能の中でテストや競技プログラミングに使いたくなりそうな機能
     - 3.6から
         - f-string
           ```python
@@ -104,7 +104,7 @@
         ```
         python -V
         ```
-        `Python 3.7.x`と出力されたら成功
+        `Python 3.4.3`と出力されたら成功
     1. インストールパッケージの確認
         ```
         pip list
