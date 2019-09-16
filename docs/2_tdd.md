@@ -141,10 +141,8 @@ from src.restaurant import *
                             ("15:01", False),  # 通常営業の開始時間
 ])
 def test_is_lunch_time(now_time, expected):
-    if "11:00" <= now_time <= "15:00":
-        return True
-    else:
-        return False      
+    actual = is_lunch_time(now_time)
+    assert actual == expected    
 ```
 
 上記のように、サンプル入出力以外にも条件から境界値を考えてテストしておくと点の取りこぼしは少なくなります
