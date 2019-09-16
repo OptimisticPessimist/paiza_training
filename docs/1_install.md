@@ -28,7 +28,7 @@
         - 変数アノテーション文法
             - `sample_dict: Dict[str, int] = dict()`
         - 数値リテラル内のアンダースコア
-            - 桁区切りに使って可読性を上げる（ファイル容量はその分増えることに注意）
+            - 桁区切りに使って可読性を上げる（ファイル容量はその分増えますが、人間には優しくなれます）
             ```python
             want_money = 5_000_000_000_000_000
             print("{:,}円欲しい!!".format(want_money))
@@ -73,10 +73,10 @@
     - Microsoftアカウントでも利用できるけど、名前が見えるので本名の人は注意しましょう
    
 #### 4. 開発環境の構築
-1. GitHubのリポジトリから自分のPCに`fork`もしくは`clone`するかzipファイルをダウンロードしてください
+1. GitHubのリポジトリから自分のPCに`fork`もしくは`clone`するかzipファイルをダウンロードしてください<br>優先度が高い方から`fork`>`clone`>DLです
     - `fork`: [ここ](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python)の緑色のボタン（Read the guide)の右下らへんにforkボタンがあります
         - 自分のGitHubアカウントにリポジトリが作成されます        
-    - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記を`<>`内を書き換えてコピペしてください
+    - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記を`<>`内を書き換えてコピペしてください<br>この方法は私のリポジトリ内にデータを保管します
         ```
         git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
         git checkout -b <あなたのアカウント名>/feature
