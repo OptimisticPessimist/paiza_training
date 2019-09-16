@@ -6,7 +6,6 @@
         - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
         - Linux: 個別対応します
 
-
 1. GitとGitHubアカウントの作成
     1. Gitとは
         - バージョン管理（現在と過去のファイル変更履歴を比較したり）
@@ -45,6 +44,7 @@
         - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記をコピペ
             ```
             git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
+            git checkout -b <あなたの名前>/first-checkout
             ```
         - DL: Gitがややこしくて使うのが難しいと思ったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
             - Gitを使わないなら以降のGit関連の話すべて無視してね
@@ -87,9 +87,9 @@
             - VSCodeのリモートペアプログラミング機能にバグがあり、pytestの最新版が使えないため必ず`5.0.1`であることを確認する  
         1. gitのブランチを切る
             ```
-            git checkout -b <あなたの名前>/first-checkout
+            git checkout -b <あなたの名前>/<そのブランチでやりたいことが分かりやすい名前>
             ```
-            - `clone`した場合は`<自分の名前>/<任意のリポジトリ名>`は好きに使ってください  
+            - `clone`した場合は`<自分の名前>/<任意のブランチ名>`は好きに使ってください  
                 - 他人のリポジトリや`master`には手を出さないように　　
             - それか自分のアカウントにforkしてください
                 - forkしても何か変更する前には`git checkout -b <ブランチ名>`するとミスったとき戻りやすい(参考[GitHub Flow](https://gist.github.com/Gab-km/3705015))
