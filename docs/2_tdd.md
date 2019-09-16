@@ -101,19 +101,11 @@ int型やstr型のデータを他のデータと合わせてプログラミン�
 
 `now_time`以外の時間、たとえば18:00は`False`が必ず返ってくるでしょう  
 `now_time`中の時間、たとえば12:00は`True`が必ず返ってくるでしょう
-テストコードを準備します
+このような値を返すソースコードを準備します
 
 ```python
-import pytest
-from src.restaurant import *
-
-
 # now_timeは不等号で比較できる型とする
-@pytest.mark.parametrize("now_time, expected", [
-                            ("18:00", False),
-                            ("12:00", True),
-])
-def test_is_lunch_time(now_time, expected):
+def is_lunch_time(now_time, expected):
     if now_time == "18:00":
         return False
     elif now_time == "12:00":
@@ -121,7 +113,7 @@ def test_is_lunch_time(now_time, expected):
 ```
 
 この二つの値はそれぞれ無効同値・有効同値といい、値が有効/無効となる範囲の代表値として範囲内の中から選んだものです  
-このような値をすべて羅列したらテストコードは完成するでしょう  
+このような値をすべて羅列したら完璧なテストコードが完成するでしょう  
 しかし、とてつもなく面倒で非効率だと言えます  
 代表値の他に、`True`と`False`が切り替わる境界となる値にバグは潜みます  
 今回であれば10:59までは通常営業で、11:00から15:00まではランチタイム営業、そして15:01から通常営業に切り替わります
