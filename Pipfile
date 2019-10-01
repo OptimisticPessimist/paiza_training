@@ -14,4 +14,4 @@ teaching-assistant = {path = "."}
 teaching-assistant = {editable = true,path = "."}
 
 [requires]
-python_version = "3.4.3"
+python_version = "3.6"
