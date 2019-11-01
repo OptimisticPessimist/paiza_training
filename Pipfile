@@ -9,6 +9,7 @@ pylint = "*"
 autopep8 = "*"
 isort = "*"
 teaching-assistant = {path = "."}
+pep8 = "*"
 
 [packages]
 teaching-assistant = {editable = true,path = "."}
