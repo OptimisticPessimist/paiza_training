@@ -8,5 +8,5 @@ from src.c049 import *
     (17, 2, 15)
 ])
 def test_moved_floor(a, b, expected):
-    actual = moved_floor(a, b)
+    actual = moved_floor())
     assert actual == expected

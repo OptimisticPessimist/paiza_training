@@ -1,5 +1,6 @@
 # coding: utf-8
 
+
 def moved_floor() -> int:
     # 計算を書く
     # 返り値はint型
