@@ -9,36 +9,34 @@
 
 ---
 #### 1. Python本体
-- Paizaスキルチェックは`3.4.3`を使用しているのでこちらをインストールします（サポート切れなのでその内バージョンアップされるはず）
-    - [Windows(64bit版)](https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64.msi)
-    - [Mac](https://www.python.org/ftp/python/3.4.3/python-3.4.3-macosx10.6.pkg)
-    - Linux: [ここ](https://www.python.org/downloads/release/python-343/)見て対応して、分からなければ質問ください
+- Paizaスキルチェックは`3.6.8`を使用しているのでこちらをインストールします（サポート切れなのでその内バージョンアップされるはず）
+    - [Windows(64bit版)](https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64.exe)
+    - [Mac](https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.9.pkg)
+    - Linux: [ここ](https://www.python.org/downloads/release/python-368/)見て対応して、分からなければ質問ください
 - ただしPython 3の最新安定版のバージョンは2019/9/16現在`3.7.4`
     - [Windows(64bit版)](https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64-webinstall.exe)
     - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
     - Linux: [ここ](https://www.python.org/downloads/release/python-374/)見て対応して、分からなければ質問ください
     
-- 注意：　Python 3.4では使えない機能の中でテストや競技プログラミングに使いたくなりそうな機能
-    - 3.6から
-        - f-string
-          ```python
-          name = "Alice"
-          print(f"Hi, {name}! What's up?")  # -> {name}に変数nameの中身である"Alice"が入り "Hi, Alice! What's up?" となる
-          ```
-        - 変数アノテーション文法
-            - `sample_dict: Dict[str, int] = dict()`
-        - 数値リテラル内のアンダースコア
-            - 桁区切りに使って可読性を上げる（ファイル容量はその分増えますが、人間には優しくなれます）
-            ```python
-            want_money = 5_000_000_000_000_000
-            print("{:,}円欲しい!!".format(want_money))
-            ``` 
-        - `enum`の`auto()`    
-    - 3.5から
-        - `typing`モジュール： コードの見通しを良くするのに使いたい
-        - 行列乗算演算子 `@`
-        - `dict()`の出力が順不同なので必要に応じて`collections.OrderedDict`を利用する
-            - `async`/`await`は利用できるシーンがわからん（シングルスレッドでも使えるけど、非同期処理をどう使えばいいか見えない）
+- 注意：　競技プログラミングに使いたくなりそうな機能
+    - f-string
+      ```python
+      name = "Alice"
+      print(f"Hi, {name}! What's up?")  # -> {name}に変数nameの中身である"Alice"が入り "Hi, Alice! What's up?" となる
+      ```
+    - 変数アノテーション文法
+        - `sample_dict: Dict[str, int] = dict()`
+    - 数値リテラル内のアンダースコア
+        - 桁区切りに使って可読性を上げる（ファイル容量はその分増えますが、人間には優しくなれます）
+        ```python
+        want_money = 5_000_000_000_000_000
+        print("{:,}円欲しい!!".format(want_money))
+        ``` 
+    - `enum`の`auto()`    
+    - `typing`モジュール： コードの見通しを良くするのに使いたい
+    - 行列乗算演算子 `@`
+    - `dict()`の出力が順不同なので必要に応じて`collections.OrderedDict`を利用する
+        - `async`/`await`は利用できるシーンがわからん（シングルスレッドでも使えるけど、非同期処理をどう使えばいいか見えない）
 
 #### 2. GitとGitHubアカウントの作成
 1. Gitとは
@@ -78,10 +76,10 @@
         - 自分のGitHubアカウントにリポジトリが作成されます        
     - `clone`: フォルダ/ディレクトリを作りたい場所へ移動してから下記を`<>`内を書き換えてコピペしてください<br>この方法は私のリポジトリ内にデータを保管します
         ```
-        git clone https://github.com/GuitarBuilderClass/Teaching-Assistant-Python.git
+        git clone https://github.com/GuitarBuilderClass/paiza_training.git
         git checkout -b <あなたのアカウント名>/feature
         ```
-    - DL: Gitがややこしくて使うのが難しいと思ったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/Teaching-Assistant-Python/archive/master.zip)して解凍してもいいよ
+    - DL: Gitがややこしくて使うのが難しいと思ったら[ファイルをダウンロード](https://github.com/GuitarBuilderClass/paiza_training/archive/master.zip)して解凍してもいいよ
         - Gitを使わないなら以降のGit関連の話すべて無視してね
         - でも仕事ではGitとかSVNとかのツールで管理するのが普通だから覚えると便利です
             - `企画書_2(最終版)(決定稿)(改訂版).xlsx.old.コピー(これで提出).xlsx`みたいなの嫌じゃん？
@@ -106,7 +104,7 @@
         ```
         python -V
         ```
-        `Python 3.4.3`と出力されたら成功です
+        `Python 3.6.8`と出力されたら成功です
     1. インストールパッケージの確認
         ```
         pip list
