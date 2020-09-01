@@ -39,7 +39,7 @@ Paizaでは解答を教え合ったりコードを公開したりするのを自
 1. テクニック
    1. [よく使う組み込み関数の紹介](docs/built-in_functions.md)
    2. [文字列の処理方法(文字列メソッド)](docs/string_method.md)
-   3. [シーケンス型(`list`, `tuple`, `range`)の扱い方]()
+   3. シーケンス型(`list`, `tuple`, `range`)の扱い方
 
 1. [問題演習](docs/exercise.md)  
     まずは各グループの最後の問題を流し読みして、解けそうか判断してください。  
