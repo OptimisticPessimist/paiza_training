@@ -19,6 +19,13 @@ Paizaでは解答を教え合ったりコードを公開したりするのを自
     1. (Option) Gitの使い方を練習
     1. (Option) SourceTree便利
     1. 環境構築
+    
+1. Pythonの基本
+    1. [コードの構造](docs/code_structures.md)
+        1. 条件分岐
+        1. 繰り返し
+    1. [関数](docs/function.md)
+    1. クラス
 
 1. [テスト駆動開発(TDD: Test Driven Development)を使ってみよう](docs/tdd.md)
     1. テストを先に書いて、コードは後で書く: なんで？
@@ -33,13 +40,6 @@ Paizaでは解答を教え合ったりコードを公開したりするのを自
    1. [よく使う組み込み関数の紹介](docs/built-in_functions.md)
    2. [文字列の処理方法(文字列メソッド)](docs/string_method.md)
    3. [シーケンス型(`list`, `tuple`, `range`)の扱い方]()
-
-1. Pythonの基本
-    1. [コードの構造](docs/code_structures.md)
-        1. 条件分岐
-        1. 繰り返し
-    1. 関数
-    1. クラス
 
 1. [問題演習](docs/exercise.md)  
     まずは各グループの最後の問題を流し読みして、解けそうか判断してください。  
