@@ -12,8 +12,11 @@ teaching-assistant = {path = "."}
 pep8 = "*"
 pycodestyle = "*"
 
-[packages]
-teaching-assistant = {editable = true,path = "."}
+[package]
+teaching-assistant = {editable = true, path = "."}
 
 [requires]
 python_version = "3.8"
+
+[packages]
+teaching-assistant = {editable = true,path = "."}
