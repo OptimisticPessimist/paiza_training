@@ -9,14 +9,14 @@
 
 ---
 #### 1. Python本体
-- Paizaスキルチェックは`3.6.8`を使用しているのでこちらをインストールします（サポート切れなのでその内バージョンアップされるはず）
-    - [Windows(64bit版)](https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64.exe)
-    - [Mac](https://www.python.org/ftp/python/3.6.8/python-3.6.8-macosx10.9.pkg)
-    - Linux: [ここ](https://www.python.org/downloads/release/python-368/)見て対応して、分からなければ質問ください
-- ただしPython 3の最新安定版のバージョンは2019/9/16現在`3.7.4`
-    - [Windows(64bit版)](https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64-webinstall.exe)
-    - [Mac](https://www.python.org/ftp/python/3.7.4/python-3.7.4-macosx10.9.pkg)
-    - Linux: [ここ](https://www.python.org/downloads/release/python-374/)見て対応して、分からなければ質問ください
+- Paizaスキルチェックは`3.8.6`を使用しているのでこちらをインストールします（サポート切れなのでその内バージョンアップされるはず）
+    - [Windows(64bit版)](https://www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe)
+    - [Mac](https://www.python.org/ftp/python/3.8.6/python-3.8.6-macosx10.9.pkg)
+    - Linux: [ここ](https://www.python.org/downloads/release/python-386/)見て対応して、分からなければ質問ください
+- ただしPython 3の最新安定版のバージョンは2020/10/21現在`3.9.0`
+    - [Windows(64bit版)](https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64-webinstall.exe)
+    - [Mac](https://www.python.org/ftp/python/3.9.0/python-3.9.0-macosx10.9.pkg)
+    - Linux: [ここ](https://www.python.org/downloads/release/python-390/)見て対応して、分からなければ質問ください
     
 - 注意：　競技プログラミングに使いたくなりそうな機能
     - f-string
